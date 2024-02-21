@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: Registration
+  data:
+    mongodb:
+      host: 127.0.0.1
+      port: 27017
+      database: Register
+  jackson:
+    default-property-inclusion: ALWAYS
+
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - prometheus
+
+
+
+
+
