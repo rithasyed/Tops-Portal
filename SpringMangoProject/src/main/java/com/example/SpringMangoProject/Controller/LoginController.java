@@ -12,13 +12,14 @@ public class LoginController {
 
     @Autowired
     private LoginServices loginServices;
+    // Added constructor
 
-    @PostMapping(value = "/save")
-    private  String saveLogin(@RequestBody Login logins)
-    {
-        loginServices.saveorUpdate(logins);
-        return logins.get_id();
-    }
+            @PostMapping(value = "/save")
+        private  String saveLogin(@RequestBody Login logins)
+        {
+            loginServices.saveorUpdate(logins);
+            return logins.get_id();
+        }
 
     @GetMapping(value = "/getAll")
     private Iterable<Login>getLogins()

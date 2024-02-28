@@ -9,9 +9,11 @@ import org.springframework.stereotype.Service;
 public class LoginServices {
 
     @Autowired
-    private LoginRepo repo;
-    public void saveorUpdate(Login logins) {
+    public LoginRepo repo;
+
+    public Login saveorUpdate(Login logins) {
         repo.save(logins);
+        return logins;
     }
 
     public Iterable<Login> listAll() {
